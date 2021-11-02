@@ -14,12 +14,18 @@ function App() {
 		// Var setCount = 0, Changing setCount state & altering useState {count}.  Var count changing by 1
 		// setCount(count + 1);
 	};
+
+	const handleDecrease = () => {
+		// action: object, take the type of action & info
+		dispatch({ type: 'decrease' });
+	};
 	// Return always in React
 	return (
 		// Div w/ class of App always here too
 		<div className="App">
 			{/* Below is JSX (What appears on the page) */}
 			<button onClick={handleCount}>I have been clicked {count} times</button>
+			<button onClick={handleDecrease}>Don't click me!</button>
 		</div>
 	);
 }
